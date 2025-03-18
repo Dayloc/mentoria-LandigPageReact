@@ -34,12 +34,12 @@ const cardData = [
 //create your first component
 const Home = () => {
   return (
-    <div className="container-fluid p-0 text-center">
+    <div className="container-fluid p-0 text-center ">
       <Navbar />
 
       <Jumbotron />
 
-      <div className="container">
+      <div className="container m-5">
         <div className="row">
           {cardData.map((card, index) => (
             <div key={index} className="col-md-3 col-sm-6 mb-4">
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Footer */}
+     
       <Footer />
     </div>
   );

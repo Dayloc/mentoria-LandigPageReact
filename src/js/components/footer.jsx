@@ -2,12 +2,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      {" "}
-      <p>
-        Made by <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-        love!
+    <div className="container-fluid  bg-secondary">
+   
+      <p className="text-light">
+        Probando un Footer.
       </p>
+
+     
     </div>
   );
 }
