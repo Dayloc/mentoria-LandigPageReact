@@ -34,26 +34,28 @@ const cardData = [
 //create your first component
 const Home = () => {
   return (
-    <div className="container-fluid p-0 text-center ">
+    <div className="container p-0  ">
       <Navbar />
+      <div className="container ">
+        <Jumbotron />
+      </div>
 
-      <Jumbotron />
-
-      <div className="container m-5">
-        <div className="row">
-          {cardData.map((card, index) => (
-            <div key={index} className="col-md-3 col-sm-6 mb-4">
-              <Card
-                title={card.title}
-                description={card.description}
-                image={card.image}
-              />
-            </div>
-          ))}
+      <div className=" text-center m-5">
+        <div className="d-flex justify-content-center">
+          <div className="row">
+            {cardData.map((card, index) => (
+              <div key={index} className="col-md-3 col-sm-6 mb-4">
+                <Card
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-     
       <Footer />
     </div>
   );

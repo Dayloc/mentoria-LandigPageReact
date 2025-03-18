@@ -9,6 +9,27 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.jumbotron{
-    background: #dedddd;
+.jumbotron {
+  background: #dedddd;
+  box-shadow: 5px 5px 10px rgb(148, 146, 146);
+  border-radius: 10px;
+}
+body {
+  background-color: rgb(251, 255, 255);
+}
+.card {
+  box-shadow: 2px 3px 27px rgb(103, 102, 102);
+  border-radius: 10px;
+}
+.jumbotron1 {
+  background: #dedddd;
+  border-radius: 10px;
+}
+.navbar {
+  box-shadow: 2px 3px 27px rgb(49, 48, 48);
+  border-radius: 10px;
+}
+.footer {
+  box-shadow: 2px 3px 27px rgb(103, 102, 102);
+  border-radius: 10px;
 }
