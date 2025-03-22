@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./card";
 import Navbar from "./navbar";
 import Jumbotron from "./jumbotron";
 import Footer from "./footer";
-
-//include images into your bundle
+import SecondCounter from "./secondCounter";
+// Imagen
 import rigoImage from "../../img/rigo-baby.jpg";
 
 // Datos dinámicos para las Cards
@@ -31,16 +31,24 @@ const cardData = [
   },
 ];
 
-//create your first component
 const Home = () => {
+  // Estado para el tiempo de alerta
+  const [alertTime, setAlertTime] = useState(null);
+
+  // Función para establecer el tiempo de alerta
+  const handleSetAlert = () => {
+    const time = prompt("Ingrese el tiempo en segundos para la alerta:");
+    setAlertTime(parseInt(time, 10));
+  };
+
   return (
-    <div className="container p-0  ">
+    <div className="container p-0">
       <Navbar />
-      <div className="container ">
+      <div className="container">
         <Jumbotron />
       </div>
 
-      <div className=" text-center m-5">
+      <div className="text-center m-5">
         <div className="d-flex justify-content-center">
           <div className="row">
             {cardData.map((card, index) => (
@@ -53,6 +61,13 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div>
+          <SecondCounter seconds={0} onAlert={alertTime} /> *
+          <button type="button" class="btn btn-info" onClick={handleSetAlert}>
+            Establecer Alerta
+          </button>
         </div>
       </div>
 

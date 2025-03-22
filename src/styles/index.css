@@ -28,6 +28,7 @@ body {
 .navbar {
   box-shadow: 2px 3px 27px rgb(49, 48, 48);
   border-radius: 10px;
+  background: #e8e7e7;
 }
 .footer {
   box-shadow: 2px 3px 27px rgb(103, 102, 102);
